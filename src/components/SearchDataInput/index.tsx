@@ -3,10 +3,18 @@ import { useCallback } from "react";
 import { Input } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 import { debounce } from "lodash";
+import { searchApi } from "./searchApi";
+import { useAppStore } from "../../stores/appStore";
 
 export const SearchDataInput = () => {
+    const setWikiResults = useAppStore(state => state.setWikiResults);
+    const setWikiResultsLoading = useAppStore(state => state.setWikiResultsLoading);
+
     const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-        console.log(e.target.value);
+        const searchedValue = e.target.value;
+        if (searchedValue.length >= 2) {
+            searchApi(searchedValue, setWikiResults, setWikiResultsLoading);
+        }
     };
 
     const debouncedChangeHandler = useCallback(debounce(changeHandler, 1000), []);
