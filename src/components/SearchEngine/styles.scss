@@ -1,0 +1,14 @@
+@import "../../styles/main.scss";
+
+.search-engine-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    height: 10vh;
+    background-color: $dark-blue;
+    .highlight-data-input-wrapper,
+    .search-data-input-wrapper {
+        width: 40vw;
+    }
+}
