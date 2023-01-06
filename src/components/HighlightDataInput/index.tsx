@@ -6,7 +6,7 @@ export const HighlightDataInput = () => {
         <div className="highlight-data-input-wrapper">
             <Input.Group compact>
                 <Input placeholder="Type searched word" />
-                <Button type="primary">Highlight</Button>
+                <Button type="primary">Highlight all</Button>
             </Input.Group>
         </div>
     );
