@@ -1,46 +1,33 @@
-# Getting Started with Create React App
+# Wikipedia API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+<img src="https://github.com/Yam1337/Wikipedia-API/blob/master/presentation-wikipedia-api.gif">
+</p>
 
-## Available Scripts
+# Description
 
-In the project directory, you can run:
+This project is a Wikipedia API App, that search wikipedia API for desired text, and allows user to highlight every of given text fragment.
+This project is a front-end application typed with TypeScript, which uses wikipedia API (https://en.wikipedia.org/w/api.php?action=query&list=search&format=json) to search for results. Results are parsed from HTML to String by Regex Expression. Searching works on-live, while user is typing. Application logic uses Lodash debounce method to protect server from overload. Application has also "Highlight all" functionality, which uses Lodash escapeRegExp and HTML <mark></mark> to highlight desired text. Global state of Application is managed by Zustand. Design of Application is mostly Ant Design.
 
-### `yarn start`
+# Technology stack
+* ReactJS (https://pl.reactjs.org)
+* TypeScript (https://www.typescriptlang.org)
+* Ant Design (https://ant.design)
+* Axios (https://axios-http.com)
+* Lodash (https://lodash.com)
+* Zustand (https://github.com/pmndrs/zustand)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Notes ⚠️
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Application may not work correctly due to a CORS policy of the Server, which doesnt allow to fetch data from my GitHub Pages. It's not a problem with my Wikipedia API Application.
 
-### `yarn test`
+# How to run locally
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* npm install
+* npm run start
 
-### `yarn build`
+# Live
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+You can see it live on:
+https://yam1337.github.io/Wikipedia-API/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
