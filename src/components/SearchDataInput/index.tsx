@@ -14,6 +14,8 @@ export const SearchDataInput = () => {
         const searchedValue = e.target.value;
         if (searchedValue.length >= 1) {
             searchApi(searchedValue, setWikiResults, setWikiResultsLoading);
+        } else {
+            setWikiResults([]);
         }
     };
 
