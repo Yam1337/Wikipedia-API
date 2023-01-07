@@ -5,10 +5,13 @@ import { SearchOutlined } from "@ant-design/icons";
 import { debounce } from "lodash";
 import { searchApi } from "./searchApi";
 import { useAppStore } from "../../stores/appStore";
+import { useWindowSize } from "../../hooks/useWindowSize";
 
 export const SearchDataInput = () => {
     const setWikiResults = useAppStore(state => state.setWikiResults);
     const setWikiResultsLoading = useAppStore(state => state.setWikiResultsLoading);
+
+    const windowSize = useWindowSize();
 
     const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         const searchedValue = e.target.value;
@@ -27,7 +30,7 @@ export const SearchDataInput = () => {
                 prefix={<SearchOutlined />}
                 placeholder="Type something to search Wiki API"
                 allowClear
-                size="large"
+                size={windowSize.width && windowSize.width > 1024 ? "large" : "small"}
                 onChange={debouncedChangeHandler}
             />
         </div>
