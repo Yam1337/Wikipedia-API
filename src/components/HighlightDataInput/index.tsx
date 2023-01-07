@@ -1,3 +1,4 @@
+import "./styles.scss";
 import { Input } from "antd";
 import { useAppStore } from "../../stores/appStore";
 

@@ -2,10 +2,18 @@
 
 .results-box-wrapper {
     height: 90vh;
+    @media only screen and (max-width: 1024px) {
+        height: 83vh;
+        padding: 12px;
+    }
     background-color: $background-color;
     padding: 24px;
     overflow: auto;
-}
-.result-card {
-    border-color: $text-color;
+    .ant-card-head,
+    .ant-card-body {
+        color: $text-color;
+    }
+    .ant-card {
+        box-shadow: 5px 5px 10px $text-light-color;
+    }
 }
