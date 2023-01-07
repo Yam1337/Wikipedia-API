@@ -12,7 +12,7 @@ export const SearchDataInput = () => {
 
     const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         const searchedValue = e.target.value;
-        if (searchedValue.length >= 2) {
+        if (searchedValue.length >= 1) {
             searchApi(searchedValue, setWikiResults, setWikiResultsLoading);
         }
     };
@@ -25,6 +25,7 @@ export const SearchDataInput = () => {
                 prefix={<SearchOutlined />}
                 placeholder="Type something to search Wiki API"
                 allowClear
+                size="large"
                 onChange={debouncedChangeHandler}
             />
         </div>

@@ -5,7 +5,7 @@ export const AppLogo = () => {
     return (
         <div className="logo-wrapper">
             <img src={logo} alt="Logo" />
-            Wikipedia-API
+            <div className="logo-text">Wikipedia API</div>
         </div>
     );
 };

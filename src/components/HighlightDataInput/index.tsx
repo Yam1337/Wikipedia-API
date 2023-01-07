@@ -1,13 +1,19 @@
-import "./styles.scss";
-import { Input, Button } from "antd";
+import { Input } from "antd";
+import { useAppStore } from "../../stores/appStore";
 
 export const HighlightDataInput = () => {
+    const setHighlightText = useAppStore(state => state.setHighlightText);
+
+    const { Search } = Input;
     return (
         <div className="highlight-data-input-wrapper">
-            <Input.Group compact>
-                <Input placeholder="Type searched word" />
-                <Button type="primary">Highlight all</Button>
-            </Input.Group>
+            <Search
+                placeholder="Text to highlight"
+                enterButton="Highlight all"
+                size="large"
+                allowClear
+                onSearch={e => setHighlightText(e)}
+            />
         </div>
     );
 };
