@@ -11,7 +11,7 @@ export const searchApi = async (
     try {
         setWikiResultsLoading(true);
         const response = await axios.get(
-            `https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&srsearch=${value}`
+            `https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&srsearch=${value}&origin=*`
         );
         setWikiResults(response.data.query.search);
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
