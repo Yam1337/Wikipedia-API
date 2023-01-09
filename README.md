@@ -17,10 +17,6 @@ This project is a front-end application typed with TypeScript, which uses wikipe
 * Lodash (https://lodash.com)
 * Zustand (https://github.com/pmndrs/zustand)
 
-# Notes ⚠️
-
-Application may not work correctly due to a CORS policy of the Server, which doesnt allow to fetch data from my GitHub Pages. It's not a problem with my Wikipedia API Application.
-
 # How to run locally
 
 * npm install
